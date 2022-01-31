@@ -1,4 +1,4 @@
-# Luke's build of dwm
+# Fork of Luke's build of dwm 
 
 ## FAQ
 
@@ -12,6 +12,7 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 
 ## Patches and features
 
+- [systray](https://dwm.suckless.org/patches/systray/): System tray on the top right corner.
 - [Clickable statusbar](https://dwm.suckless.org/patches/statuscmd/) with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
 - Reads [xresources](https://dwm.suckless.org/patches/xresources/) colors/variables (i.e. works with `pywal`, etc.).
 - scratchpad: Accessible with mod+shift+enter.
