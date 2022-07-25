@@ -3,9 +3,8 @@
 /* Constants */
 
 // Using alacritty because I can't get alt key to work on st
-#define TERMINAL "alacritty"
-#define TERMCLASS "Alacritty"
-
+#define TERMINAL "st"
+#define TERMCLASS "St"
 #define BROWSER "firefox"
 
 /* appearance */
@@ -23,7 +22,7 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static char *fonts[]          = { "monospace:size=11", "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"  };
+static char *fonts[]          = { "monospace:size=12", "NotoColorEmoji:pixelsize=12:antialias=true:autohint=true"  };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -40,14 +39,8 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-
-// When using alacritty:
-const char *spcmd1[] = {TERMINAL, "--class", "spterm", NULL };
-const char *spcmd2[] = {TERMINAL, "--class", "spcalc", "-o", "fonts.size=20", "-e", "bc", "-lq", NULL };
-
-// When using st:
-// const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-// const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 
 static Sp scratchpads[] = {
 	/* name          cmd  */
@@ -64,7 +57,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	*/
 	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "firefox",NULL,         NULL,       	    9 << 8,       0,           0,         0,        -1 },
+	{ "firefox",  NULL,       NULL,       	    9 << 8,       0,           0,         0,        -1 },
 	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
 	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
