@@ -57,15 +57,20 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	*/
 	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "firefox",  NULL,       NULL,       	    9 << 8,       0,           0,         0,        -1 },
-	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
 	{ TERMCLASS,  NULL,       NULL,       	    0,            0,           1,         0,        -1 },
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ TERMCLASS,  "bg",       NULL,       	    1 << 7,       0,           1,         0,        -1 },
 	{ "spterm",   NULL,       NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ "spcalc",   NULL,       NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
 	{ "1Password",NULL,       NULL,       	    0,            1,           0,         0,        -1 },
-	{ "Slack",    NULL,       NULL,       	    9 << 6,       0,           0,         0,        -1 },
+
+	{ "jetbrains-rider", NULL, NULL,	    1 << 2,       0,           0,         0,        -1 },
+	{ "Gimp",     NULL,       NULL,       	    1 << 3,       0,           0,         0,        -1 },
+	{ "Spotify",  NULL,       NULL,       	    1 << 4,       0,           0,         0,        -1 },
+	{ "Microsoft Teams - Preview", NULL, NULL,  1 << 6,       0,           0,         0,        -1 },
+	{ "Slack",    NULL,       NULL,       	    1 << 6,       0,           0,         0,        -1 },
+	{ "firefox",  NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
+	{ "Brave-browser",  NULL, NULL,       	    1 << 8,       0,           0,         0,        -1 },
 };
 
 /* layout(s) */
